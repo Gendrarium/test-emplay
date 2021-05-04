@@ -1,0 +1,30 @@
+.header {
+  padding-top: 20px;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 80vw;
+  min-height: 50px;
+}
+
+@media screen and (max-width: 599px) {
+  .header__wrapper  {
+  }
+ }
+
+.header__title {
+  font-size: 35px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.header__subtitle {
+  font-size: 20px;
+  margin: 5px auto;
+  text-align: center;
+  color: white;
+}
