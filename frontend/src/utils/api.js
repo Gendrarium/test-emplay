@@ -2,7 +2,7 @@ class Api {
   constructor({url}) {
     this._url = url;
   }
-  sendAnswers({name, lunk}) {
+  sendAnswers(name, questions, answers) {
     return fetch(`${this._url}/`, {
       method: 'POST',
       headers: {
@@ -10,7 +10,8 @@ class Api {
       },
       body: JSON.stringify({
         name: name,
-        answers: lunk
+        questions: questions,
+        answers: answers
       })
     })
       .then((res) => {

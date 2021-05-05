@@ -1,3 +1,4 @@
+export const titles = ['Как вас зовут?', 'Выберите любимый овощ?', 'Выберите снеки?']
 
 export const inputOne = ['Картошка', 'Морковь', 'Свёкла', 'Капуста', 'Помидор'];
 export const valueOne = ['potato', 'carrot', 'beet', 'cabbage', 'tomato'];

@@ -1,5 +1,6 @@
 import Question from '../Question/Question';
 import {
+  titles,
   valueOne,
   inputOne,
   valueTwo,
@@ -30,7 +31,7 @@ function Main() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    api.sendAnswers(values, checked)
+    api.sendAnswers({questions: titles})
       .then(
         console.log('привет')
       )
@@ -41,8 +42,15 @@ function Main() {
       <section className="questions">
         <form className="questions__form" onSubmit={handleSubmit}>
           <Question
+            type="text"
+            title={titles[0]}
+            name="name"
+            handleChange={handleChangeInput}
+            values={values}
+          />
+          <Question
             type="radio"
-            title="Выберите любимый овощ?"
+            title={titles[1]}
             name="vegetable"
             value={valueOne}
             input={inputOne}
@@ -51,18 +59,11 @@ function Main() {
           />
           <Question
             type="checkbox"
-            title="Выберите снеки?"
+            title={titles[2]}
             name="snack"
             value={valueTwo}
             input={inputTwo}
             handleChange={handleChangeChechBox}
-            values={values}
-          />
-          <Question
-            type="text"
-            title="Как вас зовут?"
-            name="name"
-            handleChange={handleChangeInput}
             values={values}
           />
           <button className="questions__button"  type="submit">Отправить</button>
