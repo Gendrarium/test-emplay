@@ -17,9 +17,11 @@
   },
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.12.2",
-    "pdfkit": "^0.12.1"
+    "mongoose": "^5.12.7",
+    "pdfkit": "^0.12.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "^7.23.0",
