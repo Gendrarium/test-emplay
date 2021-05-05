@@ -1,12 +1,12 @@
 import './Header.css'
 
-function Header() {
+function Header({title, subtitle}) {
 
   return (
     <header className="header">
       <div className="header__wrapper">
-        <h1 className="header__title">Опрос</h1>
-        <p className="header__subtitle">Пройдите опрос, нам ценно ваше мнение!</p>
+        <h1 className="header__title">{title}</h1>
+        <p className="header__subtitle">{subtitle}</p>
       </div>
     </header>
   )

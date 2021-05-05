@@ -13,6 +13,24 @@ module.exports.getAnswers = (req, res) => {
     });
 };
 
+module.exports.getUserById = (req, res) => {
+  Answer.findById(req.params.id)
+    .then((answer) => {
+      if (!answer) {
+        res.status(404).send({message: 'Ответ по данному id не найден.'});
+      } else {
+        res.send(answer);
+      }
+    })
+    .catch((err) => {
+      if (err.name === 'CastError') {
+        res.status(404).send({message: 'Ответ по данному id не найден.'});
+      } else {
+        res.status(500).send({message: 'Ошибка сервера'});
+      }
+    });
+};
+
 module.exports.createAnswer = (req, res) => {
     const doc = new PDFDocument();
     const randomId = uuid.v1();

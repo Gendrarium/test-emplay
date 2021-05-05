@@ -4,7 +4,7 @@
 
 .questions {
   margin: 0 auto;
-  max-width: 620px;
+  max-width: 580px;
 }
 
 @media screen and (max-width: 599px) {
@@ -27,6 +27,7 @@
   background-color: #696969;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 599px) {

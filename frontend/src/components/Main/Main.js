@@ -45,7 +45,6 @@ function Main({setIsPopupOpen, setIsSuccess}) {
         answers.push(values[item]);
       }
     })
-    console.log(answers);
 
     api.sendAnswers({ questions: titles, answers: answers})
       .then((res)=>{
