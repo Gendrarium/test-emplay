@@ -2,14 +2,13 @@ class Api {
   constructor({url}) {
     this._url = url;
   }
-  sendAnswers(name, questions, answers) {
+  sendAnswers({questions, answers}) {
     return fetch(`${this._url}/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name: name,
         questions: questions,
         answers: answers
       })

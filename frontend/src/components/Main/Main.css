@@ -7,6 +7,12 @@
   max-width: 620px;
 }
 
+@media screen and (max-width: 599px) {
+  .questions  {
+    max-width: 320px;
+  }
+}
+
 .questions__form {
   display: flex;
   flex-direction: column;
@@ -21,4 +27,12 @@
   background-color: #696969;
   border: none;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 599px) {
+  .questions__button  {
+    font-size: 15px;
+    width: 120px;
+    height: 30px;
+  }
 }
