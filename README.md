@@ -1,4 +1,4 @@
-# Тестовое задание: emplay.io (backend & frontend)
+# Тестовое задание: emplay.ai (backend & frontend)
 
 ### Обзор
 
